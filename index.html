@@ -2,16 +2,19 @@
   <head>
     <title>MASON</title>
 
-    <link rel="icon" type="image/x-icon" href="https://mason.money/favicon.png" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://mason.money/favicon.png"
+    />
     <meta name="description" content="Serious Business Only" />
     <meta property="og:title" content="MASON.MONEY" />
     <meta property="og:description" content="Serious Business Only" />
-    <meta property="og:image" content="/business.png" /> TBD
+    <meta property="og:image" content="/business.png" />
 
     <style>
-      body {
-        overflow: hidden;
-      }
+      /* ========== PAGE STYLES ================ */
+
       h1 {
         display: flex;
         justify-content: center;
@@ -23,12 +26,41 @@
         margin: 0;
       }
       h1.inverted {
-        background-color: green;
-        color: white;
+        background: linear-gradient(359deg, #444, black, #444);
+        border-top: #e6e830 5px dashed;
+        border-bottom: #e6e830 5px dashed;
       }
       h1::selection {
         background-color: green;
         color: white;
+      }
+
+      /* ========== SCROLLBAR STYLES ================ */
+
+      ::-webkit-scrollbar {
+        width: 1.6rem;
+        height: 0px;
+      }
+      ::-webkit-scrollbar-track {
+        background: yellow;
+      }
+      ::-webkit-scrollbar-button {
+        background: orange;
+      }
+
+      ::-webkit-scrollbar-track {
+        box-shadow: 1px 1px 10px 5px purple;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: red;
+        &:horizontal {
+          background: blue;
+        }
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: purple;
       }
     </style>
   </head>
@@ -235,8 +267,5 @@
     <h1>$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</h1>
     <h1>$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</h1>
     <h1>$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</h1>
-    
-    
-    
   </body>
 </html>
