@@ -1,0 +1,98 @@
+---
+layout: empty
+title:  Installing Redmine on Heroku
+---
+
+<html>
+    <head>
+        <title>MASON</title>
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="https://mason.money/favicon.png"
+        />
+        <meta name="description" content="Dollar Defense" />
+        <meta property="og:title" content="MASON.MONEY" />
+        <meta property="og:description" content="Dollar Defense" />
+        <!-- <meta property="og:image" content="/og.png" /> TBD -->
+
+        <style>
+            body {
+                overflow: hidden;
+          
+            }
+            h1 {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                font-size: 30vw;
+                color: green;
+                text-shadow: 2px 2px 1px rgb(0, 0, 0);
+                line-height: 0.7em;
+                margin: 0;
+            }
+
+            #Form {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+            }
+            input {
+                width: 90%;
+                font-size: 5vw;
+            }
+            input::placeholder {
+                color: #ccc;
+            }
+        </style>
+    </head>
+    <body>
+        <br><br><br>
+        <h1>What is 🤔 gold?</h1>
+
+        <br /><br /><br />
+        <br /><br /><br />
+        <br /><br /><br /><br />
+
+        <form id="Form">
+            <input
+                type="text"
+                id="Answer"
+                placeholder="Type Your Answer Here"
+            />
+        </form>
+
+        <script>
+            /// 1f95a
+            var attempts = 0
+
+            // let hex = '🥚'.codePointAt(0).toString(16)
+            // let emo = String.fromCodePoint('0x' + hex)
+
+            // console.log(hex, emo)
+
+            document
+                .getElementById('Form')
+                .addEventListener('submit', (event) => {
+
+                    
+
+                    attempts++
+
+                    // Convert answer
+                    var answer = document.getElementById('Answer').value
+                    var emojiHex = answer.codePointAt(0).toString(16)
+                    
+
+                    if(emojiHex === "1f95a") {
+                        alert("You have unlocked the secret code of the golden egg. Give this egg to your mother and she will give you further instructions")
+                    } else {
+                        alert("Incorrect. Try Again.");
+                        document.getElementById('Answer').value = ""
+                        event.preventDefault();
+                    }
+                })
+        </script>
+    </body>
+</html>
