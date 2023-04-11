@@ -59,27 +59,16 @@
         </form>
 
         <script>
-            /// 1f95a
             var attempts = 0
-
-            // let hex = '🥚'.codePointAt(0).toString(16)
-            // let emo = String.fromCodePoint('0x' + hex)
-
-            // console.log(hex, emo)
-
+            
             document
                 .getElementById('Form')
                 .addEventListener('submit', (event) => {
-
-                    
-
                     attempts++
 
-                    // Convert answer
                     var answer = document.getElementById('Answer').value
                     var emojiHex = answer.codePointAt(0).toString(16)
                     
-
                     if(emojiHex === "1f95a") {
                         alert("You have unlocked the secret code of the golden egg. Give this egg to your mother and she will give you further instructions")
                     } else {
